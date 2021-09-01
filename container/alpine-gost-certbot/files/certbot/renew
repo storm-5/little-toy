@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/bin/certbot renew --force-renewal
+pkill -f gost-linux && sh /root/files/cmd.sh
