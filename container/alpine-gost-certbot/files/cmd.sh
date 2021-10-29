@@ -3,9 +3,9 @@
 set -e
 
 CERT_DIR=/etc/letsencrypt
-CERT ${CERT_DIR}/live/${DOMAIN}/fullchain.pem;
-KEY ${CERT_DIR}/live/${DOMAIN}/privkey.pem;
-GOST=/root/files/gost-linux-amd64-2.11.1
+CERT=${CERT_DIR}/live/${DOMAIN}/fullchain.pem;
+KEY=${CERT_DIR}/live/${DOMAIN}/privkey.pem;
+GOST=/root/files/gost/gost-linux-amd64-2.11.1
 
 # Get certs
 if [ -d ${CERT_DIR} ]; then
