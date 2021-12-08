@@ -15,7 +15,7 @@ docker run \
 	--name alpine-nginx-certbot \
 	-v ${LETSENCRYPT_DIR}:/etc/letsencrypt:z \
 	-v ${NGINX_DIR}:/etc/nginx/conf.d:z \
-    -v ${NGINX_HTML_DIR}:/usr/share/nginx/html:z \
+	-v ${NGINX_HTML_DIR}:/usr/share/nginx/html:z \
 	-p ${HTTP_PORT}:80 \
 	-p ${HTTPS_PORT}:443 \
 	-e WEBSOCKET_SERVER=${WEBSOCKET_SERVER} \

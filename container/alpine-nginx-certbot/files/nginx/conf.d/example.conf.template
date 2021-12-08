@@ -1,6 +1,6 @@
 map $http_upgrade $connection_upgrade {
-    default upgrade;
-    '' close;
+	default upgrade;
+	'' close;
 }
 
 upstream websocket {
@@ -9,10 +9,10 @@ upstream websocket {
 
 
 server {
-    listen 80;
-    server_name {{DOMAIN}}:80 www.{{DOMAIN}}:80;
-    
-    return 301 https://{{DOMAIN}}$request_uri;
+	listen 80;
+	server_name {{DOMAIN}}:80 www.{{DOMAIN}}:80;
+	
+	return 301 https://{{DOMAIN}}$request_uri;
 }
 
 server {
@@ -32,16 +32,16 @@ server {
 	ssl_ecdh_curve X25519:prime256v1:secp521r1:secp384r1;
 
 	
-    # redirect server error pages to the static page
+	# redirect server error pages to the static page
 	error_page  404              /404.html;
-    location = /404.html {
-        root   /usr/share/nginx/html;
-    }
+	location = /404.html {
+		root   /usr/share/nginx/html;
+	}
 	
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
-    }
+	error_page   500 502 503 504  /50x.html;
+	location = /50x.html {
+		root   /usr/share/nginx/html;
+	}
 
 
 	location / {
@@ -51,12 +51,12 @@ server {
 	}
 
 	location /stream {
-        proxy_pass http://websocket;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection $connection_upgrade;
-        proxy_set_header Host $host;
-    }
+		proxy_pass http://websocket;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+		proxy_set_header Host $host;
+	}
 
 }
 
