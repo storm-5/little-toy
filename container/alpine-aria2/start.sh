@@ -2,7 +2,7 @@
 
 HTTP_PORT=8000
 ARIA2C_RPC_TOKEN=accesstoken
-FILEBROWSER_ROOTDIR=/data
+DOWNLOAD_DIR=/data
 
 # run container
 docker run \
