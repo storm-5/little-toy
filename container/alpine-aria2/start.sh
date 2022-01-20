@@ -10,5 +10,6 @@ docker run \
 	--name alpine-aria2 \
 	-p ${HTTP_PORT}:80 \
 	-e ARIA2C_RPC_TOKEN=${ARIA2C_RPC_TOKEN} \
-	-v ${FILEBROWSER_ROOTDIR}:/data \
+	-v ${DOWNLOAD_DIR}:/data \
+	-e DOWNLOAD_DIR=/data \
 	alpine-aria2
