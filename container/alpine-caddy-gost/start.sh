@@ -12,7 +12,7 @@ LETSENCRYPT_DIR="./files/letsencrypt/"
 # run container
 docker run \
 	-d \
-	--name alpine-gost-certbot \
+	--name alpine-caddy-gost \
 	-v ${Caddy_CONF_DIR}:/etc/caddy:Z \
 	-v ${LETSENCRYPT_DIR}:/root/.caddy:Z \
 	-p ${HTTP_PORT}:80 \

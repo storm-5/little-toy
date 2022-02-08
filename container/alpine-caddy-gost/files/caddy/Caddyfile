@@ -15,10 +15,6 @@
 # If there is only one site block, its curly braces { } are optional.
 # If multiple sites share the same definition, you can list all of them together. 
 # eg: localhost:8080, example.com, www.example.com {...}
-www.{{DOMAIN}} {
-	redir https://{{DOMAIN}}{uri}
-}
-
 {{DOMAIN}} {
 	# a matcher token immediately following the directive can limit that directive's scope. 
 	# The matcher token can be one of these forms:
