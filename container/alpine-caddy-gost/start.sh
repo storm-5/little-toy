@@ -4,6 +4,7 @@ DOMAIN=example.com
 EMAIL=user@gmail.com
 FP_USER=user
 FP_PASS=password
+WS_PATH=/stream
 HTTP_PORT=8000
 HTTPS_PORT=44300
 Caddy_CONF_DIR="./files/caddy/"
@@ -21,4 +22,5 @@ docker run \
 	-e EMAIL=${EMAIL} \
 	-e FP_USER=${FP_USER} \
 	-e FP_PASS=${FP_PASS} \
+	-e WS_PATH=${WS_PATH} \
 	alpine-caddy-gost
