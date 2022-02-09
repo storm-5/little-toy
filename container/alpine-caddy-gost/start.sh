@@ -7,8 +7,8 @@ FP_PASS=password
 WS_PATH=/stream
 HTTP_PORT=8000
 HTTPS_PORT=44300
-Caddy_CONF_DIR="./files/caddy/"
-LETSENCRYPT_DIR="./files/letsencrypt/"
+Caddy_CONF_DIR="$(pwd)/files/caddy/"
+LETSENCRYPT_DIR="$(pwd)/files/letsencrypt/"
 
 # run container
 docker run \
