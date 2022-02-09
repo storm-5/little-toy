@@ -90,11 +90,14 @@
 		# probe_resistance google.com
 	}
 
-
-	proxy /api/* localhost:9001 localhost:9002
-
-	# websocket
+	# to gost ws
 	proxy /stream localhost:4430 {
+		websocket
+		transparent
+	}
+
+	proxy /prefix/api/* localhost:9001 localhost:9002 {
+		without /prefix
 		websocket
 		transparent
 	}
