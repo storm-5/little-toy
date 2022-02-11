@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # build image
-docker build -t alpine-aria2 .
+podman build -t alpine-aria2 .

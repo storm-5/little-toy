@@ -5,7 +5,7 @@ ARIA2C_RPC_TOKEN=accesstoken
 DOWNLOAD_DIR=/data
 
 # run container
-docker run \
+podman run \
 	-d \
 	--name alpine-aria2 \
 	-p ${HTTP_PORT}:80 \
