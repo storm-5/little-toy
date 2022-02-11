@@ -6,7 +6,7 @@ FILEBROWSER_PASS=pass
 FILEBROWSER_ROOTDIR=/
 
 # run container
-docker run \
+podman run \
 	--rm -it \
 	--name alpine-filebrowser \
 	-p ${HTTP_PORT}:8080 \

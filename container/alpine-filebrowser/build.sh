@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # build image
-docker build -t alpine-filebrowser .
+podman build -t alpine-filebrowser .
