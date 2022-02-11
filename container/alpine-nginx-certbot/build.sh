@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # build image
-docker build -t alpine-nginx-certbot .
+podman build -t alpine-nginx-certbot .
