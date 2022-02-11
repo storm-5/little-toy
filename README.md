@@ -1,5 +1,5 @@
 # 简介
-使用AriaNg + Nginx 实现的aria下载工具，主要用于远程控制下载
+使用AriaNg + Nginx 实现的aria2下载工具，主要用于远程控制下载
 
 # 用法方法
 - 克隆本分支
@@ -17,7 +17,7 @@
 - 启动容器
 
 	启动之前，按需修改`start.sh`里面的常量，然后执行`sh start.sh`。  
-	启动后即可使用https正向代理`http://<domain>/ariang/`即可访问下载器，在页面配置aria rcp参数http://<domain>/aria2c/
+	启动后打开`http://<domain>/ariang/`即可访问下载器(需要在页面配置aria rcp参数: http://<domain>/aria2/ ，其它参数值可从start.sh常量中取得)
 
 - 创建systemd单元（可选）
 
