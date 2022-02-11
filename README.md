@@ -23,7 +23,7 @@
 
 	```sh
 	cd /etc/systemd/system/
-	podman generate systemd --name proxy --new -f  # 无意外会在当前目录创建单元文件
+	podman generate systemd --name alpine-caddy-gost --new -f  # 无意外会在当前目录创建单元文件
 	systemctl daemon-reload
 	systemctl enable <生成的单元文件名称>
 	```
