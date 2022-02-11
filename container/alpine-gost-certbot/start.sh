@@ -6,10 +6,10 @@ USER=user
 PASS=password
 HTTP_PORT=80
 HTTPS_PORT=443
-LETSENCRYPT_DIR="./files/letsencrypt/"
+LETSENCRYPT_DIR="$(pwd)/files/letsencrypt/"
 
 # run container
-docker run \
+podman run \
 	-d \
 	--name alpine-gost-certbot \
 	-v ${LETSENCRYPT_DIR}:/etc/letsencrypt/ \
